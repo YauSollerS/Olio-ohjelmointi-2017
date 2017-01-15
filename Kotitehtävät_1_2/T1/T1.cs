@@ -14,18 +14,18 @@ namespace T1
         {
 
             int luku;
-            System.Console.WriteLine("Anna luku > ");
+            System.Console.Write("Anna luku > ");
 
             luku = Convert.ToInt32(Console.ReadLine());
 
             if (luku == 1 || luku == 2 || luku == 3)
             {
                 if (luku == 1)
-                    System.Console.WriteLine("Annoit luvun yksi ");
+                    System.Console.WriteLine("Annoit luvun on yksi ");
                 if (luku == 2)
-                    System.Console.WriteLine("Annoit luvun kaksi ");
+                    System.Console.WriteLine("Annoit luvun on kaksi ");
                 if (luku == 3)
-                    System.Console.WriteLine("Annoit luvun kolme ");
+                    System.Console.WriteLine("Annoit luvun on kolme ");
             }
             else
                 System.Console.WriteLine("joku muu luku ");

@@ -21,7 +21,7 @@ namespace T9
            for (int i=0; i<MAX;i++)
              {
                     int[] luvut = new int[MAX];
-                    System.Console.WriteLine("Anna luku ");
+                    System.Console.Write("Anna luku ");
                     luvut[i] = Convert.ToInt32(Console.ReadLine());
                     MAX++;
                 

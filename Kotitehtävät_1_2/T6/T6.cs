@@ -16,7 +16,7 @@ namespace T6
         static void Main(string[] args)
         {
             int matka;
-            System.Console.WriteLine("Anna matka > ");
+            System.Console.Write("Anna matka > ");
             matka = Convert.ToInt32(Console.ReadLine());
             double bensa = matka * 7.02 / 100;
             double euro = bensa * 1.595;

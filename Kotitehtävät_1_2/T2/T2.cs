@@ -18,7 +18,7 @@ namespace T2
         static void Main(string[] args)
         {
             int luku;
-            System.Console.WriteLine("Anna pistemäärä ");
+            System.Console.Write("Anna pistemäärä ");
 
             luku = Convert.ToInt32(Console.ReadLine());
             if (luku == 1 || luku==0)

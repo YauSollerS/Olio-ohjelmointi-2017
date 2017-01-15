@@ -11,7 +11,7 @@ namespace T4
         static void Main(string[] args)
         {
             int ika;
-            System.Console.WriteLine("Anna ikäni: ");
+            System.Console.Write("Anna ikäni: ");
             ika = Convert.ToInt32(Console.ReadLine());
             if (ika < 18)
 

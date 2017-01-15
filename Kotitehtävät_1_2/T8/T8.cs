@@ -18,7 +18,7 @@ namespace T8
 
             for (int i=0; i<3; i++)
             {
-                System.Console.WriteLine("Anna luku ");
+                System.Console.Write("Anna luku ");
                 luvut[i] = Convert.ToInt32(Console.ReadLine());
 
             }

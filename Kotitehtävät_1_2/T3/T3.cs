@@ -12,11 +12,11 @@ namespace T3
             int luku1, luku2, luku3;
            
           
-            System.Console.WriteLine("Anna luku1: ");
+            System.Console.Write("Anna luku1: ");
             luku1 = Convert.ToInt32(Console.ReadLine());
-            System.Console.WriteLine("Anna luku2: ");
+            System.Console.Write("Anna luku2: ");
             luku2 = Convert.ToInt32(Console.ReadLine());
-            System.Console.WriteLine("Anna luku3: ");
+            System.Console.Write("Anna luku3: ");
             luku3 = Convert.ToInt32(Console.ReadLine());
 
             

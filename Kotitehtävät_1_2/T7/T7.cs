@@ -15,7 +15,7 @@ namespace T7
         static void Main(string[] args)
         {
             int vuosi;
-            System.Console.WriteLine("Anna vuosi ");
+            System.Console.Write("Anna vuosi ");
             vuosi = Convert.ToInt32(Console.ReadLine());
 
             if (vuosi % 4 == 0 && vuosi%100!=0)

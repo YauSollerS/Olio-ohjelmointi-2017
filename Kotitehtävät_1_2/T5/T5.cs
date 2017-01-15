@@ -15,7 +15,7 @@ namespace T5
         static void Main(string[] args)
         {
             int sek;
-            System.Console.WriteLine("Anna sekunnit > ");
+            System.Console.Write("Anna sekunnit > ");
             sek = Convert.ToInt32(Console.ReadLine());
             int tunti = sek / 3600;
             int minutti = (sek - (tunti*3600)) / 60;
