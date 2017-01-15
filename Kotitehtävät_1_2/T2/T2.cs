@@ -1,6 +1,6 @@
 ﻿using System;
 /// <summary>
-/// Tehtävä 1
+/// Tehtävä 2
 ///Tee ohjelma, jossa annetaan oppilaalle koulunumero seuraavan taulukon mukaan (pistemäärä kysytään ja ohjelma tulostaa numeron):
 ///pisteraja numero
 /// 0-1	0
