@@ -10,7 +10,15 @@ namespace JAMK.IT
     {
         public string enimi { get; set; }
         public string snimi { get; set; }
-        public double keskiarvo { get; set; }
-                
+        public double arvosanaMath { get; set; }
+        public double arvosanaPhys { get; set; }
+        public double keskiar { get; set; }
+
+        public void KeskiArvo ()
+        {
+            keskiar = (arvosanaMath + arvosanaPhys) / 2;
+        }
+
+
     }
 }

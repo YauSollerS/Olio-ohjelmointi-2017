@@ -18,19 +18,51 @@ namespace T5
     {
         static void Main(string[] args)
         {
-            var Opiskelijat = new List<Opiskelija>
-            {
-                new Opiskelija() { enimi="Pekka", snimi="Nisanen", keskiarvo=4.3},
-                new Opiskelija() { enimi="Jukka", snimi="Halonen", keskiarvo=4.7},
-                new Opiskelija() { enimi="Jakko", snimi="Turunen", keskiarvo=3.2},
-                new Opiskelija() { enimi="Jarmo", snimi="Loikkanen", keskiarvo=3.8},
-                new Opiskelija() { enimi="Emma", snimi="Rantalainen", keskiarvo=5.0},
-            };
 
-            foreach (Opiskelija theOpiskelija in Opiskelijat)
+
+            Opiskelija[] student = new Opiskelija[5];
+
+            for (int i=0; i<5; i++)
             {
-                Console.WriteLine(theOpiskelija.enimi + " " + theOpiskelija.snimi + " " + theOpiskelija.keskiarvo);
+                student[i] = new Opiskelija();
             }
+
+            student[0].enimi = "Pekka";
+            student[0].snimi = "Nisonen";
+            student[0].arvosanaMath = 5;
+            student[0].arvosanaPhys = 4;
+            student[0].KeskiArvo();
+
+            student[1].enimi = "Jukka";
+            student[1].snimi = "Halonen";
+            student[1].arvosanaMath = 4;
+            student[1].arvosanaPhys = 3;
+            student[1].KeskiArvo();
+
+            student[2].enimi = "Mikko";
+            student[2].snimi = "Rantalainen";
+            student[2].arvosanaMath = 3;
+            student[2].arvosanaPhys = 2;
+            student[2].KeskiArvo();
+
+            student[3].enimi = "Jarmo";
+            student[3].snimi = "Loikanen";
+            student[3].arvosanaMath = 2;
+            student[3].arvosanaPhys = 1;
+            student[3].KeskiArvo();
+
+            student[4].enimi = "Arnold";
+            student[4].snimi = "Schwarzenneger";
+            student[4].arvosanaMath = 10;
+            student[4].arvosanaPhys = 20;
+            student[4].KeskiArvo();
+
+            for (int j=0;j<5;j++)
+            {
+                Console.WriteLine("Opiskelijan {0} etunimi: {1} sukunimi: {2} arvosana: {3}", j, student[j].enimi, student[j].snimi, student[j].keskiar );
+            }
+
+                                                           
             
         }
     }
