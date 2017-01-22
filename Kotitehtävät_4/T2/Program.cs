@@ -4,33 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labra04.T1
+namespace T2
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            Hissi Elevator = new Hissi();
-            
-            
+            Vahvistin Player = new Vahvistin();
 
             int lenght = 1;
             for (int i = 0; i < lenght; i++)
             {
-                Console.WriteLine("Hissi on nyt kerroksessa: " + Elevator.Floor);
-                Console.Write("Give a new floor number(1-5) > ");
+                
+                Console.Write("Give a new volume value (0-100) > " );
                 string line = Console.ReadLine();
                 int number;
-                bool result = int.TryParse(line, out number);
-                Elevator.Floor = number;
-
-                Console.WriteLine(Elevator.FloorMessage);
-                Console.WriteLine();
-                lenght++;
                 
+                bool result = int.TryParse(line, out number);
+
+                Player.Volume = number;
+                                
+                Console.WriteLine(Player.VolumeMessage);
+                lenght++;
+
             }
-            
         }
     }
 }

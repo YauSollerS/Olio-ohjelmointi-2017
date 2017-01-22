@@ -36,16 +36,13 @@ namespace Labra04.T1
         }
         
 
-        public bool IsFloorValid
-        {
-            get { return IsFloorValid; }
-        }
+        
 
         public string FloorMessage
         {
             get
             {
-                if (IsFloorValid)
+                if (isFloorValid==true)
                 {
                     return "Valittu kerros " + floor;
                 }
