@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Toteutetaan opettajan kanssa yhdessä konsolipohjainen ohjelma, jolla voidaan hallita henkilöitä eli henkilörekisteri.
+/// </summary>
+/// 
+
 namespace T1
 {
     class Program
