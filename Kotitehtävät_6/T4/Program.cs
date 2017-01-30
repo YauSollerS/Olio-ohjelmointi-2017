@@ -29,26 +29,21 @@ namespace T4
             Pelaaja player4 = new Pelaaja("Olli", "Aitola", 24, 60);
             Pelaaja player5 = new Pelaaja("Joona", "Erving", 22, 53);
 
-            jou1.HaePelaajat(player1);
-            jou1.HaePelaajat(player2);
-            jou1.HaePelaajat(player3);
-            jou1.HaePelaajat(player4);
-            jou1.HaePelaajat(player5);
+            jou1.LisaaPelaajat(player1);
+            jou1.LisaaPelaajat(player2);
+            jou1.LisaaPelaajat(player3);
+            jou1.LisaaPelaajat(player4);
+            jou1.LisaaPelaajat(player5);
 
             Console.WriteLine(jou1.ToString());
-            foreach (var pl in jou1.Pelaajat)
-            {
-                Console.WriteLine( pl.ToString());
-            }
-
+                                
             jou1.Pelaajat.Remove(45);
 
             Console.WriteLine("\nUusi joukkue: \n");
 
-            foreach (var pl in jou1.Pelaajat)
-            {
-                Console.WriteLine(pl.ToString());
-            }
+            Console.WriteLine(jou1.ToString());
+
+          
         }
     }
 }

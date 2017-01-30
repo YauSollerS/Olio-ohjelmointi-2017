@@ -40,7 +40,7 @@ namespace T4
             Pelaajat = new Dictionary<int, Pelaaja>();
         }
         
-        public void HaePelaajat(Pelaaja pel)
+        public void LisaaPelaajat(Pelaaja pel)
         {
             Pelaajat.Add(pel.Numero, pel);
         }
@@ -48,7 +48,15 @@ namespace T4
 
         public override string ToString()
         {
-            return "Joukkue: " + Nimi + " Kaupunki: " + Kotikaupunki;
+            string s= "Joukkue: " + Nimi + " Kaupunki: " + Kotikaupunki;
+            foreach (var pl in Pelaajat)
+            {
+                
+                s += "\n" + pl.ToString();
+            }
+
+            return s;
+
         }
     }
 }
