@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/// <summary>
+/// Tee ohjelma, joka kirjoittaa käyttäjän antamat merkkijonot tiedostoon (lopetusehdon voit päättää itse) ja sulje tiedosto.
+/// Avaa tämän jälkeen tiedosto lukemista varten ja tulosta näyttölaitteelle tiedoston sisältö riveittäin. Huomioi 
+/// mahdolliset poikkeukset, joita tiedoston käsittely voi aiheuttaa.
+/// </summary>
+/// 
+
 namespace T1
 {
     class Program
@@ -18,9 +26,9 @@ namespace T1
                 
                 do
                 {
-                    Console.Write("Give a text line (enter ends). P : ");
+                    Console.Write("Give a text line (enter ends). Enter #stop# to STOP  : ");
                     string line = Console.ReadLine();
-                    if (line == "0")
+                    if (line == "#stop#")
                     {
                         break;
                     }
@@ -28,10 +36,22 @@ namespace T1
                     
                 } while (true);
             }
+            catch (UnauthorizedAccessException)
+            {
+                Console.WriteLine("Can't open file for writing (UnauthorizedAccessException)");
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("Opened stream is null (ArgumentNullException)");
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Opened stream is not writable (ArgumentException)");
+            }
+            
             catch (Exception)
             {
-
-                Console.WriteLine("You don't gave a number!");
+                Console.WriteLine("Some other exception happend (Exception)");
             }
             finally
             {
