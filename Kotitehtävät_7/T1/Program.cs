@@ -26,7 +26,7 @@ namespace T1
                 
                 do
                 {
-                    Console.Write("Give a text line (enter ends). Enter #stop# to STOP  : ");
+                    Console.Write("Give a text line . Enter #stop# to STOP  : ");
                     string line = Console.ReadLine();
                     if (line == "#stop#")
                     {
