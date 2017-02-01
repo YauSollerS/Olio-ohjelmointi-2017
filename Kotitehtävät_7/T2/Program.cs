@@ -44,7 +44,7 @@ namespace T2
 
             catch (Exception)
             {
-                Console.WriteLine("Some other exception happend (Exception)");
+                Console.WriteLine("Some exception happend (Exception)");
             }
             finally
             {
