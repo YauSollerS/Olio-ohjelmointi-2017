@@ -1,0 +1,25 @@
+﻿<Window x:Class="T3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:T3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="376.382" Width="349.118">
+    <Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ikkunan leveys (L):" VerticalAlignment="Top" Margin="10,10,0,0" Height="22" Width="121"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ikkunan Korkeus (H):" VerticalAlignment="Top" Margin="10,48,0,0" Height="20" Width="121"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Karmipuun leveys (W):" VerticalAlignment="Top" Margin="10,87,0,0" Height="22" Width="121"/>
+        <Button x:Name="button" Content="Laske" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="124,146,0,0" Click="button_Click"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ikkunan pinta-ala:" VerticalAlignment="Top" Margin="10,200,0,0" Height="22" Width="121"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Lasin pinta-ala:" VerticalAlignment="Top" Margin="10,238,0,0" Height="20" Width="121"/>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Karmin piiri:" VerticalAlignment="Top" Margin="10,277,0,0" Height="22" Width="121"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="195,10,0,0"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="195,48,0,0"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="195,87,0,0"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="195,200,0,0"/>
+        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="195,238,0,0"/>
+        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="195,277,0,0"/>
+
+    </Grid>
+</Window>
