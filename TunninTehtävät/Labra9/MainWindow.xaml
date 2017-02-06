@@ -1,0 +1,17 @@
+﻿<Window x:Class="Labra9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labra9"
+        mc:Ignorable="d"
+        Title="Yauheni's First WPF App" Height="350" Width="525" FontSize="20">
+    <Grid Background="#FF1ACCE8">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Anna nimesi" VerticalAlignment="Top" Width="171" Margin="35,10,0,0" Background="#FFF5EB0F"/>
+        <Button x:Name="button" Content="Tervehdi" HorizontalAlignment="Left" Margin="35,78,0,0" VerticalAlignment="Top" Width="171" Height="48" Click="button_Click" Background="#FF13F709"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Margin="35,156,0,0" Width="171" Background="#FFF10DB3" Height="48"/>
+        <Button x:Name="button_Copy" Content="About" HorizontalAlignment="Left" Margin="322,242,0,0" VerticalAlignment="Top" Width="171" Height="48" Background="#FF13F709" Click="button_Copy_Click"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="##" FontSize="100" VerticalAlignment="Top" Margin="341,48,0,0" Background="#FFF01111"/>
+
+    </Grid>
+</Window>
