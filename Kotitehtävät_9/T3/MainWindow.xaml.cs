@@ -37,13 +37,17 @@ namespace T3
                 korkeus = Convert.ToDouble(textBox2.Text);
                 karmi = Convert.ToDouble(textBox3.Text);
 
-                double ikkpinta = leveys * korkeus;
-                double laspinta = ikkpinta - (karmi * korkeus * 2 + 45 * (leveys - 2 * karmi) * 2);
+                double ikkpinta = leveys * korkeus/100;
+                double laspinta = (leveys * korkeus - (karmi * korkeus * 2 + 45 * (leveys - 2 * karmi) * 2))/100;
+                double karpiiri = (leveys * 2 + korkeus * 2) / 10;
 
                 string value1 = ikkpinta.ToString();
                 string value2 = laspinta.ToString();
+                string value3 = karpiiri.ToString();
                 textBox4.Text = value1 + " cm^2";
                 textBox5.Text = value2 + " cm^2";
+                textBox6.Text = value3 + " cm";
+
             }
             catch (FormatException)
             {
