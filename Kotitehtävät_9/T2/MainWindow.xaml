@@ -17,7 +17,7 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="EURO €" VerticalAlignment="Top" Margin="44,76,0,0" Height="50" Width="193" Background="#FF67DA3B" Foreground="#FF113DD1" FontSize="30" TextAlignment="Center"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="US DOLLAR $" VerticalAlignment="Top" Margin="281,76,0,0" Height="50" Width="193" Background="#FFCD2C12" Foreground="#FFF9F4F4" FontSize="30" TextAlignment="Center"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="90" Margin="44,175,0,0" Background="White" />
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Copy" VerticalAlignment="Top" Width="90" Margin="384,175,0,0" Background="White" />
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="90" Margin="384,175,0,0" Background="White" />
         <Button x:Name="button" Content="Convert € to $" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Margin="205,174,0,0" Click="button_Click"/>
         <Button x:Name="button_Copy" Content="Convert $ to €" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Margin="205,205,0,0" Click="button_Click_2"/>
 

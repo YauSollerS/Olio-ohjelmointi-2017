@@ -5,13 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labra9"
         mc:Ignorable="d"
-        Title="Yauheni's First WPF App" Height="350" Width="525" FontSize="20">
+        Title="Yauheni's First WPF App" Height="432.143" Width="525" FontSize="20">
     <Grid Background="#FF1ACCE8">
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Anna nimesi" VerticalAlignment="Top" Width="171" Margin="35,10,0,0" Background="#FFF5EB0F"/>
-        <Button x:Name="button" Content="Tervehdi" HorizontalAlignment="Left" Margin="35,78,0,0" VerticalAlignment="Top" Width="171" Height="48" Click="button_Click" Background="#FF13F709"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Margin="35,156,0,0" Width="171" Background="#FFF10DB3" Height="48"/>
-        <Button x:Name="button_Copy" Content="About" HorizontalAlignment="Left" Margin="322,242,0,0" VerticalAlignment="Top" Width="171" Height="48" Background="#FF13F709" Click="button_Copy_Click"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="##" FontSize="100" VerticalAlignment="Top" Margin="341,48,0,0" Background="#FFF01111"/>
-
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Anna nimesi" VerticalAlignment="Top" Width="171" Margin="10" Background="#FFF5EB0F"/>
+                <Button x:Name="btnSayHello" Content="Tervehdi" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="171" Height="48" Click="button_Click" Background="#FF13F709"/>
+                <TextBlock x:Name="txtHello" HorizontalAlignment="Left" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Margin="10" Width="171" Background="#FFF10DB3" Height="48"/>
+                <Button x:Name="btnAbout" Content="About" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="171" Height="48" Background="#FF13F709" Click="button_Copy_Click"/>
+                <Button x:Name="btnExit" Content="Exit" Margin="10" />
+            </StackPanel>
+        <StackPanel>
+                <TextBlock x:Name="txbCounter" HorizontalAlignment="Left" TextWrapping="Wrap" Text="##" FontSize="100" VerticalAlignment="Top" Margin="10" Background="#FFF01111"/>
+        </StackPanel>
+        </StackPanel>
+        <DockPanel VerticalAlignment="Bottom">
+            <StatusBar>
+                <StatusBarItem>
+                    <TextBlock x:Name="txbMessages"></TextBlock>
+                </StatusBarItem>
+            </StatusBar>            
+        </DockPanel>
+        
     </Grid>
 </Window>

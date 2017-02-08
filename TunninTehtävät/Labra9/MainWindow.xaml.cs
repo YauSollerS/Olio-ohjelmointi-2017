@@ -30,12 +30,15 @@ namespace Labra9
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            textBlock.Text = "Hello " + textBox.Text;
-            MessageBox.Show("Terve " + textBox.Text, "Yauheni's Messut");
+            txtHello.Text = "Hello " + txtName.Text;
+           // MessageBox.Show("Terve " + txtName.Text, "Yauheni's Messut");
             
             luku++;
             string wat = luku.ToString();
-            textBlock1.Text = wat;
+            txbCounter.Text = wat;
+
+            //ilmoitus tilariville
+            txbMessages.Text = "Painoit buttosta btnSayHello";
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
