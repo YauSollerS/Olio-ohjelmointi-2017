@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labra11_DemoX3"
         mc:Ignorable="d"
-        Title="Binding Demo" Height="350" Width="551.056">
+        Title="Binding Demo" Height="350" Width="575.909">
     <Window.Resources>
         <sys:String x:Key="MyAppName">Yauhenin mahti sovellus V0.1</sys:String>
         <x:Array x:Key="myBands" Type="sys:String">
@@ -51,9 +51,23 @@
                 <Button x:Name="btnBind" Content="Sido olio-kokoelmaan" Width="200" Click="btnBind_Click"/>
                 <TextBox x:Name="txtName" Text="{Binding Path=Name}"/>
                 <TextBox x:Name="txtCity" Text="{Binding Path=City}"/>
-                <Button x:Name="btnForward" Content="Seuravaa" />
-                <Button x:Name="btnBackward" Content="Edellinen" />
-                
+                <Button x:Name="btnForward" Content="Seuravaa" Click="btnForward_Click" />
+                <Button x:Name="btnBackward" Content="Edellinen" Click="btnBackward_Click" />
+
+                <TextBlock FontSize="14">Uuden joukkueen lisäys:</TextBlock>
+                <StackPanel Width="Auto" HorizontalAlignment="Left" Orientation="Horizontal">
+                    <TextBlock FontSize="14" Text="- nimi: "/>
+                    <TextBox x:Name="txtName2" Width="150" Text=""/>
+                    
+                </StackPanel>
+                <StackPanel Width="Auto" HorizontalAlignment="Left" Orientation="Horizontal">
+                    <TextBlock FontSize="14" Text="- kaupunki: "/>
+                    <TextBox x:Name="txtTown" Width="150" Text=""/>
+
+                </StackPanel>
+
+                <Button x:Name="btnLisaa" Content="Lisää joukkue liigaan" Click="btnLisaa_Click"  />
+
 
 
             </StackPanel>

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using JAMK.ICT;
 
 namespace Labra11_DemoX3
 {
@@ -25,6 +26,7 @@ namespace Labra11_DemoX3
         JAMK.ICT.HockeyLeague liiga;
         ObservableCollection<JAMK.ICT.HockeyTeam> joukkueet;
         int counter = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -55,6 +57,48 @@ namespace Labra11_DemoX3
             //spRight.DataContext = tiimi;
             //demo2: kytketään olio-kokoelman 1. olioon
             spRight.DataContext = joukkueet[counter];
+        }
+
+        private void btnForward_Click(object sender, RoutedEventArgs e)
+        {
+            if (counter >= joukkueet.Count - 1)
+            {
+                spRight.DataContext = joukkueet[counter];
+            }
+            else
+            {
+                counter++;
+                spRight.DataContext = joukkueet[counter];
+            }
+        }
+
+        private void btnBackward_Click(object sender, RoutedEventArgs e)
+        {
+            if (counter <= 0)
+            {
+                spRight.DataContext = joukkueet[counter];
+            }
+            else
+            {
+                counter--;
+                spRight.DataContext = joukkueet[counter];
+            }
+        }
+
+        private void btnLisaa_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(txtName2.Text == ""))
+            {
+                
+                HockeyTeam joukkue = new HockeyTeam();
+                joukkue.Name = txtName2.Text;
+                joukkue.City = txtTown.Text;
+                joukkueet.Add(joukkue);
+            }
+            else
+            {
+                txtName2.Text = "ANAA JOUKUEN NIMI!";
+            }
         }
     }
 }
