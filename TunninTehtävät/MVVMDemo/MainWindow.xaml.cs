@@ -25,6 +25,15 @@ namespace MVVMDemo
         {
             InitializeComponent();
             svmo.LoadStudents();
+            try
+            {
+                svmo.LoadStudentsFromMysql();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
