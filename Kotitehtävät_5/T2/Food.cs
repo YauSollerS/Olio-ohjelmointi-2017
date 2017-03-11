@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace T2
 {
-    abstract class Food
+    public class Food
     {
         public string Name { get; set; }
         public string Type { get; set; }
