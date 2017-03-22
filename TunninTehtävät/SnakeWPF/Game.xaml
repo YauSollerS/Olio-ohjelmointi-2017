@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Yauheni's Finest Snake Game" Height="422" Width="642" ResizeMode="NoResize">
     <Grid Background="Black">
-        <Canvas Name="paintCanvs" Background="Black" HorizontalAlignment="Stretch" MaxWidth="642" MaxHeight="422">
+        <Canvas Name="paintCanvas" Background="Black" HorizontalAlignment="Stretch" MaxWidth="642" MaxHeight="422">
             <TextBlock x:Name="txtMessage" FontFamily="Tahoma" FontSize="30" Foreground="Yellow" Canvas.Left="10" Canvas.Top="10" Text="Let's play!"/>
         </Canvas>
 
