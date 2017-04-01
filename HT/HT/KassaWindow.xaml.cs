@@ -10,19 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HT.ViewModels;
 
-namespace HT.Views
+namespace HT
 {
     /// <summary>
-    /// Interaction logic for TuotteetView.xaml
+    /// Interaction logic for KassaWindow.xaml
     /// </summary>
-    public partial class TuotteetView : UserControl
+    public partial class KassaWindow : Window
     {
-        public TuotteetView()
+        
+
+        public KassaWindow()
         {
-            InitializeComponent();
+            
         }
+
+       
     }
 }

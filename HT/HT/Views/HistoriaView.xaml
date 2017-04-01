@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="HT.Views.HistoriaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HT.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
+            <ListView>
+                
+            </ListView>
+        </DockPanel>
+
+        <DockPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="1" Margin="5">
+                    <TextBlock Text="Liiketoimi ID"/>
+                    <TextBox x:Name="tapahtumaIdBox" />
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                    <TextBlock Text="Ostopäivä"/>
+                    <TextBox x:Name="paivaBox"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="1" Margin="5">
+                    <TextBlock Text="Maksutapa"/>
+                    <TextBox x:Name="maksutapaBox" />
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.Column="1" Margin="5">
+                    <TextBlock Text="Maksu ID"/>
+                    <TextBox />
+                </StackPanel>
+
+                <StackPanel Grid.Row="0" Grid.Column="0" Margin="5">
+                    <TextBlock Text="Nimi"/>
+                    <TextBox x:Name="nimiBox" />
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
+                    <TextBlock Text="Sähköposti"/>
+                    <TextBox />
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="0" Margin="5">
+                    <TextBlock Text="Puhelin"/>
+                    <TextBox x:Name="puhelinBox" />
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.Column="0" Margin="5">
+                    <TextBlock Text="Laskutusosoite"/>
+                    <TextBox x:Name="laskutusosoiteBox" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="0" Grid.Column="2" Margin="5">
+                    <TextBlock Text="Toimitusosoite"/>
+                    <TextBox x:Name="toimitusosoiteBox" />
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="2" Margin="5">
+                    <TextBlock Text="Tuottaja"/>
+                    <TextBox x:Name="tuottajaBox" />
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="2" Margin="5">
+                    <TextBlock Text="Seurantanumero"/>
+                    <TextBox x:Name="seurantanumeroBox" />
+                </StackPanel>
+            </Grid>
+        </DockPanel>
+
+    </Grid>
+</UserControl>

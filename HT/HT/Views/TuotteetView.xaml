@@ -25,7 +25,9 @@
 
         <DockPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="6">
             <TextBlock Text="Tuotteet" FontSize="26" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
-
+            <ListView>
+                
+            </ListView>
         </DockPanel>
 
         <DockPanel Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3">
@@ -36,11 +38,11 @@
                 </StackPanel>
                 <StackPanel Margin="15">
                     <TextBlock Text="Hinta" FontSize="20"/>
-                    <TextBlock  FontSize="16"/>
+                    <TextBlock FontSize="16"/>
                 </StackPanel>
                 <StackPanel Margin="15">
-                    <TextBlock Text="Toimittaja" FontSize="20"/>
-                    <TextBlock  FontSize="16"/>
+                    <TextBlock Text="Tuottaja" FontSize="20"/>
+                    <TextBlock FontSize="16"/>
                 </StackPanel>
             </StackPanel>
             <DockPanel Margin="5">
@@ -48,11 +50,47 @@
 
                 </StackPanel>
             </DockPanel>
-        </DockPanel>
-
-        <DockPanel Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="4">
+            
             
         </DockPanel>
+        <DockPanel Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="4">
+            <StackPanel DockPanel.Dock="Left" Margin="10" MinWidth="125">
+                <TextBlock Text="Tuotetyypi"/>
+                <ComboBox x:Name="typpiComboBox" FontSize="16"   >
+                    
+                    
+                </ComboBox>
+                <TextBlock Text="Tuottaja"/>
+                <ComboBox x:Name="tuottajaComboBox"  FontSize="16" >
+                    
+                </ComboBox>
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Hinta"/>
+                        <TextBox x:Name="hintaTextBox"  FontSize="16"/>
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Bottom">
+                        <StackPanel x:Name="lisaaPanel" Margin="5">
+                            <Button Content="Lisää" />
+                        </StackPanel>
+                        <StackPanel x:Name="muokkaaPanel" Visibility="Collapsed" Margin="5">
+                            <Button Content="Muokkaa" />
+                            <Button Content="Lopeta" />
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </StackPanel>
+            <DockPanel Margin="10">
+                <StackPanel DockPanel.Dock="Top">
+                    <TextBlock Text="Tuotenimi"/>
+                    <TextBox x:Name="nimiTextBox" Text="{Binding ProductModel.Name, Mode=TwoWay}" FontSize="16"/>
+                    <TextBlock Text="Kuvaus"/>
+                </StackPanel>
+                <TextBox x:Name="kuvausTextBox"  FontSize="16"/>
+            </DockPanel>
+        </DockPanel>
+
+
 
     </Grid>
 </UserControl>

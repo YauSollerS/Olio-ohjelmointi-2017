@@ -49,7 +49,17 @@ namespace HT
 
         private void btnMyynti_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.DataContext = new MyyntiViewModel();
+        }
+
+        private void btnHistoria_Click(object sender, RoutedEventArgs e)
+        {
+            this.DataContext = new HistoriaViewModel();
+        }
+
+        private void btnToimittajat_Click(object sender, RoutedEventArgs e)
+        {
+            this.DataContext = new TuottajatViewModel();
         }
     }
 }

@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,13 +57,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="KassaWindow.xaml.cs">
+      <DependentUpon>KassaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Asiakas.cs" />
+    <Compile Include="Models\Liiketoimi.cs" />
+    <Compile Include="Models\Tuote.cs" />
+    <Compile Include="Models\Tuottaja.cs" />
+    <Compile Include="Tallennukset.cs" />
+    <Compile Include="ViewModels\HistoriaViewModel.cs" />
+    <Compile Include="ViewModels\KassaViewModel.cs" />
+    <Compile Include="ViewModels\MyyntiViewModel.cs" />
+    <Compile Include="ViewModels\TuottajatViewModel.cs" />
     <Compile Include="ViewModels\TuotteetViewModel.cs" />
+    <Compile Include="Views\HistoriaView.xaml.cs">
+      <DependentUpon>HistoriaView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MyyntiView.xaml.cs">
       <DependentUpon>MyyntiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TuottajatView.xaml.cs">
+      <DependentUpon>TuottajatView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TuotteetView.xaml.cs">
       <DependentUpon>TuotteetView.xaml</DependentUpon>
     </Compile>
+    <Page Include="KassaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,7 +98,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\HistoriaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MyyntiView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TuottajatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,9 +142,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

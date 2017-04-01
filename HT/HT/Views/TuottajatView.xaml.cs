@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace HT.Views
 {
     /// <summary>
-    /// Interaction logic for TuotteetView.xaml
+    /// Interaction logic for TuottajatView.xaml
     /// </summary>
-    public partial class TuotteetView : UserControl
+    public partial class TuottajatView : UserControl
     {
-        public TuotteetView()
+        public TuottajatView()
         {
             InitializeComponent();
         }
