@@ -1,4 +1,4 @@
-﻿<Window x:Class="HT.MainWindow"
+﻿<Controls:MetroWindow x:Class="HT.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,8 +6,9 @@
         xmlns:viewmodels="clr-namespace:HT.ViewModels"
         xmlns:views="clr-namespace:HT.Views"
         xmlns:local="clr-namespace:HT"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="925">
+        Title="BUSINESS MASTER EXTREME EDITION" Height="700" Width="960">
 
     <Window.Resources>
         <DataTemplate x:Name="TuotteetView" DataType="{x:Type viewmodels:TuotteetViewModel}">
@@ -26,8 +27,26 @@
     </Window.Resources>
 
     <DockPanel>
-        <Grid DockPanel.Dock="Left" MinWidth="125" Background="#FFFDFDFD">
+        <Grid DockPanel.Dock="Left" MinWidth="125" Background="#C2DFFF">
             <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -37,19 +56,41 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.Column="0">
-                <Label x:Name="clockLabel" FontSize="22" HorizontalAlignment="Center"/>
+            <StackPanel Grid.Row="0" Grid.Column="11" Grid.ColumnSpan="1" Grid.RowSpan="2">
+                <Label x:Name="clockLabel" FontSize="22" HorizontalAlignment="Center" />
             </StackPanel>
-            <StackPanel Grid.Row="1" Grid.RowSpan="4" Grid.Column="0">
+
+            <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Grid.RowSpan="2">
                 <Button x:Name="btnTuotteet" Content="Tuotteet" Height="50" Margin="2" Click="btnTuotteet_Click" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center" Grid.RowSpan="2">
                 <Button x:Name="btnMyynti" Content="Myynti" Height="50" Margin="2" Click="btnMyynti_Click" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" VerticalAlignment="Center" Grid.RowSpan="2">
                 <Button x:Name="btnHistoria" Content="Historia" Height="50" Margin="2" Click="btnHistoria_Click" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center" Grid.RowSpan="2">
                 <Button x:Name="btnToimittajat" Content="Toimittajat" Height="50" Margin="2" Click="btnToimittajat_Click" />
             </StackPanel>
+            <DockPanel Grid.Row="4" Grid.ColumnSpan="10" Grid.RowSpan="19" Grid.Column="1">
+                <ContentControl Content="{Binding}"></ContentControl>
+            </DockPanel>
+
         </Grid>
 
-        <ContentControl Content="{Binding}"></ContentControl>
+        
     </DockPanel>
-</Window>
+</Controls:MetroWindow>

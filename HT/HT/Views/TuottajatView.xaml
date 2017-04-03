@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HT.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="500">
-    <Grid Background="White">
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid Background="#EBF4FA">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,6 +20,7 @@
         </Grid.RowDefinitions>
 
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="4">
+            <TextBlock Text="TUOTTAJAT" FontSize="26" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
             <ListView x:Name="contactListview">
                 
                 
@@ -27,13 +28,13 @@
             
         </DockPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5">
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5,36,5,5">
             <TextBlock Text="Yrityksen Nimi" FontSize="20" Margin="5"/>
             <TextBlock />
             <TextBlock Text="Puhelin Numero" FontSize="20" Margin="5"/>
             <TextBlock />
         </StackPanel>
-        <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Margin="5">
+        <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Margin="5,36,5,5">
             <TextBlock Text="Osoite" FontSize="20" Margin="5"/>
             <TextBlock />
             <TextBlock Text="Sähköposti" FontSize="20" Margin="5"/>

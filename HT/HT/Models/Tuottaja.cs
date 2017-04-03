@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HT.Models
 {
-    class Tuottaja
+    public class Tuottaja
     {
         public int Id { get; set; }
         public string Nimi { get; set; }

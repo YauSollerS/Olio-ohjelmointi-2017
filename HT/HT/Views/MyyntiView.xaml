@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HT.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="500">
-    <Grid Background="White">
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid Background="#EBF4FA">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
 
         <DockPanel Grid.RowSpan="3">
-            <TextBlock Text="Tuotteet" FontSize="26" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
+            <TextBlock Text="TUOTTEET" FontSize="26" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
             <ListView>
                 
             </ListView>
@@ -27,7 +27,7 @@
         </DockPanel>
 
         <DockPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Grid DockPanel.Dock="Top" Margin="5">
+            <Grid DockPanel.Dock="Top" Margin="4.2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>

@@ -14,26 +14,29 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.IO;
+using MahApps.Metro.Controls;
 
 namespace HT
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         private DispatcherTimer _clockTimer;
 
         public MainWindow()
         {
             InitializeComponent();
+            Onkotiedostot();
 
             _clockTimer = new DispatcherTimer();
             _clockTimer.Interval = new TimeSpan(1000);
             _clockTimer.Tick += _clockTimer_Tick;
             _clockTimer.Start();
 
-
+            this.DataContext = new TuotteetViewModel();
 
         }
 
@@ -60,6 +63,22 @@ namespace HT
         private void btnToimittajat_Click(object sender, RoutedEventArgs e)
         {
             this.DataContext = new TuottajatViewModel();
+        }
+
+        private void Onkotiedostot()
+        {
+            if (!File.Exists("liiketoimet.json"))
+            {
+                File.Create("liiketoimet.json");
+            }
+            if (!File.Exists("tuottajat.json"))
+            {
+                File.Create("tuottajat.json");
+            }
+            if (!File.Exists("tuotteet.json"))
+            {
+                File.Create("tuotteet.json");
+            }
         }
     }
 }

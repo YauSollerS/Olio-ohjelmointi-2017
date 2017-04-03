@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HT.Models
 {
-    class Liiketoimi
+     public class Liiketoimi
     {
         public int Id { get; set; }
         public DateTime Aika { get; set; }
