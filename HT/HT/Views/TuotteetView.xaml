@@ -73,12 +73,12 @@
                 </StackPanel>
                 
                 <StackPanel Margin="15" Width="100">
-                    <TextBlock Text="HINTA" FontSize="20" TextAlignment="Center"/>
-                    <TextBlock Text="{Binding ViewedTuote.Hinta, StringFormat=€{0}}" FontSize="16" TextAlignment="Center" Margin="0,5,0,0"/>
+                    <TextBlock Text="HINTA" FontSize="20" TextAlignment="Left"/>
+                    <TextBlock Text="{Binding ViewedTuote.Hinta, StringFormat=€{0}}" FontSize="16" TextAlignment="Left" Margin="0,5,0,0"/>
                 </StackPanel>
                 <StackPanel Margin="15" Width="100">
-                    <TextBlock Text="TUOTTAJA" FontSize="20" TextAlignment="Right" />
-                    <TextBlock Text="{Binding ViewedTuote.CarrierNimi}" FontSize="16" TextAlignment="Right" Margin="0,5,0,0"/>
+                    <TextBlock Text="TUOTTAJA" FontSize="20" TextAlignment="Left" />
+                    <TextBlock Text="{Binding ViewedTuote.CarrierNimi}" FontSize="16" TextAlignment="Left" Margin="0,5,0,0"/>
                 </StackPanel>
             </StackPanel>
             <DockPanel Margin="5">
