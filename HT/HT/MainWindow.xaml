@@ -83,7 +83,7 @@
                 <Button x:Name="btnHistoria" Content="Historia" Height="50" Margin="2" Click="btnHistoria_Click" />
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center" Grid.RowSpan="2">
-                <Button x:Name="btnToimittajat" Content="Toimittajat" Height="50" Margin="2" Click="btnToimittajat_Click" />
+                <Button x:Name="btnToimittajat" Content="Tuottajat" Height="50" Margin="2" Click="btnToimittajat_Click" />
             </StackPanel>
             <DockPanel Grid.Row="4" Grid.ColumnSpan="10" Grid.RowSpan="19" Grid.Column="1">
                 <ContentControl Content="{Binding}"></ContentControl>
