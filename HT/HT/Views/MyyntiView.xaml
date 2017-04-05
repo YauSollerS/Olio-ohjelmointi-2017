@@ -54,7 +54,7 @@
         </DockPanel>
         <DockPanel Margin="5" Grid.Column="1" Grid.Row="2">
             <StackPanel>
-                <TextBlock Text="Toimittaja"/>
+                <TextBlock Text="Toimitustapa"/>
                 <ComboBox/>
             </StackPanel>
         </DockPanel>
