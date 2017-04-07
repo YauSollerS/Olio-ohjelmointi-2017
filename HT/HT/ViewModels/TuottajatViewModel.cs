@@ -39,7 +39,7 @@ namespace HT.ViewModels
             set
             {
                 _tuottajaModel = value;
-                OnPropertyChanged("ContactModel");
+                OnPropertyChanged("TuottajaModel");
             }
         }
 
@@ -129,11 +129,12 @@ namespace HT.ViewModels
         {
             var valmistaja = tuottaja as Tuottaja;
             ViewedTuottaja = valmistaja;
+            
         }
 
-        public void SelectTuottaja(object supplier)
+        public void SelectTuottaja(object tuottaja)
         {
-            var valmistaja = supplier as Tuottaja;
+            var valmistaja = tuottaja as Tuottaja;
             TuottajaModel = valmistaja;
         }
 
@@ -179,7 +180,7 @@ namespace HT.ViewModels
         private void AntaaId(Tuottaja valmistaja)
         {
            
-            valmistaja.Id = 0;
+            valmistaja.Id = 1;
             if (Tuottajat.Count > 0)
             {
                 

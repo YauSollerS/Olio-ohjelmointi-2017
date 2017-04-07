@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HT.ViewModels;
+using HT.Models;
 
 namespace HT.Views
 {
@@ -20,9 +22,23 @@ namespace HT.Views
     /// </summary>
     public partial class MyyntiView : UserControl
     {
+        MyyntiViewModel ViewModel;
+
         public MyyntiView()
         {
             InitializeComponent();
+            DataContextChanged += new DependencyPropertyChangedEventHandler(View_DataContextChanged);
+        }
+
+        void View_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            ViewModel = DataContext as MyyntiViewModel;
+        }
+
+        private void Kassalle_Click(object sender, RoutedEventArgs e)
+        {
+            KassaWindow kassaWindow = new KassaWindow(ViewModel);
+            kassaWindow.ShowDialog();
         }
     }
 }

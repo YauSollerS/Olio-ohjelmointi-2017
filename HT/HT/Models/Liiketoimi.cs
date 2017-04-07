@@ -21,7 +21,7 @@ namespace HT.Models
         public Toimitustavat Toimitus { get; set; }
         public Maksutavat Maksutapa { get; set; }
         public List<Tuote> Tuotteet { get; set; }
-        public double SubYhteensa { get; set; }
+        public double OstoHinta { get; set; }
         public double Verot { get; set; }
         public double Toimitusmaksu { get; set; }
         public double Yhteensa { get; set; }

@@ -82,6 +82,7 @@
     <Compile Include="Tallennukset.cs" />
     <Compile Include="ViewModels\HistoriaViewModel.cs" />
     <Compile Include="ViewModels\KassaViewModel.cs" />
+    <Compile Include="ViewModels\KoriViewModel.cs" />
     <Compile Include="ViewModels\MyyntiViewModel.cs" />
     <Compile Include="ViewModels\ObservableObject.cs" />
     <Compile Include="ViewModels\TuottajatViewModel.cs" />

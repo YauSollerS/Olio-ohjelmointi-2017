@@ -12,19 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using HT.ViewModels;
-
+using System.IO;
+using MahApps.Metro.Controls;
 namespace HT
 {
     /// <summary>
     /// Interaction logic for KassaWindow.xaml
     /// </summary>
-    public partial class KassaWindow : Window
+    public partial class KassaWindow : MetroWindow
     {
-        
+        KassaViewModel ViewModel;
 
-        public KassaWindow()
+        public KassaWindow(MyyntiViewModel myynti)
         {
-            
+            InitializeComponent();
+            ViewModel = new KassaViewModel(myynti);
+            DataContext = ViewModel;
         }
 
        

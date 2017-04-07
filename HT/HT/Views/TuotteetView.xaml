@@ -78,7 +78,7 @@
                 </StackPanel>
                 <StackPanel Margin="15" Width="100">
                     <TextBlock Text="TUOTTAJA" FontSize="20" TextAlignment="Left" />
-                    <TextBlock Text="{Binding ViewedTuote.CarrierNimi}" FontSize="16" TextAlignment="Left" Margin="0,5,0,0"/>
+                    <TextBlock Text="{Binding ViewedTuote.ValmistajaNimi}" FontSize="16" TextAlignment="Left" Margin="0,5,0,0"/>
                 </StackPanel>
             </StackPanel>
             <DockPanel Margin="5">
@@ -102,7 +102,7 @@
 
                     </ComboBox>
                     <TextBlock Text="Tuottaja"/>
-                    <ComboBox x:Name="tuottajaComboBox" SelectedValue="{Binding SelectedCarrier, Mode=TwoWay}" ItemsSource="{Binding Carriers}"  FontSize="16" >
+                    <ComboBox x:Name="tuottajaComboBox" SelectedValue="{Binding SelectedValmistaja, Mode=TwoWay}" ItemsSource="{Binding Valmistajat}" FontSize="16" >
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Nimi}"/>

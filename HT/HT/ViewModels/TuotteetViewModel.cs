@@ -15,13 +15,13 @@ namespace HT.ViewModels
 
         public ObservableCollection<Tuote> Tuotteet { get; set; }
 
-        
+        public ObservableCollection<Tuottaja> Valmistajat { get; set; }
 
         private Tuote _tuoteModel { get; set; }
 
         private Tuote _viewedTuote { get; set; }
 
-        
+        private Tuottaja _selectedValmistaja { get; set; }
 
 
         public Tuote TuoteModel
@@ -37,13 +37,36 @@ namespace HT.ViewModels
             }
         }
 
-   
+        public Tuottaja SelectedValmistaja
+        {
+            get
+            {
+                return _selectedValmistaja;
+            }
+            set
+            {
+                _selectedValmistaja = value;
+                
+                TuoteModel.ValmistajaId = _selectedValmistaja.Id;
+                OnPropertyChanged("SelectedValmistaja");
+            }
+        }
+
         public Tuote ViewedTuote
         {
             get { return _viewedTuote; }
             set
             {
                 _viewedTuote = value;
+
+                if (value != null && Valmistajat.Count > 0)
+                {
+                    
+                    var valmistaja = Valmistajat.FirstOrDefault(param => param.Id == _viewedTuote.ValmistajaId);
+                    
+                    if (valmistaja != null) _viewedTuote.ValmistajaNimi = valmistaja.Nimi;
+                }
+
                 OnPropertyChanged("ViewedTuote");
             }
         }
@@ -97,9 +120,11 @@ namespace HT.ViewModels
         {
             _tuoteList = Tallennukset.LoadTuoteList();
             Tuotteet = _tuoteList;
-            
+            Valmistajat = Tallennukset.LoadTuottajat();
             TuoteModel = new Tuote();
             
+            SelectedValmistaja = new Tuottaja();
+
             _editTuote = new RelayCommand(EditTuote);
             _addTuote = new RelayCommand(AddTuote);
             _removeTuote = new RelayCommand(RemoveTuote);
@@ -110,6 +135,9 @@ namespace HT.ViewModels
         public void EditTuote(object tuote)
         {
             TuoteModel = tuote as Tuote;
+            SelectedValmistaja.Id = TuoteModel.ValmistajaId;
+
+            SelectedValmistaja = Valmistajat.FirstOrDefault(c => c.Id == TuoteModel.ValmistajaId) ?? Valmistajat[0];
 
             OnPropertyChanged("TuoteModel");
 

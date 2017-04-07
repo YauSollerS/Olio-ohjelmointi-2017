@@ -19,8 +19,8 @@ namespace HT
     public enum Toimitustavat
     {
         Posti,
-        Matkahuolto,
-        Kotikuljetus
+        Matkahuolto
+        
     }
 
     public enum Maksutavat
