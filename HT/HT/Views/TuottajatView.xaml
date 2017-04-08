@@ -21,7 +21,7 @@
 
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="4">
             <TextBlock Text="TUOTTAJAT" FontSize="26" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
-            <ListView x:Name="tuottajaListview" ItemsSource="{Binding Tuottajat}"  SelectedItem="{Binding ViewedTuottaja, Mode=TwoWay}">
+            <ListView x:Name="tuottajaListview" ItemsSource="{Binding Tuottajat}"  SelectedItem="{Binding ViewedTuottaja, Mode=TwoWay}" Margin="5">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border Padding="2" BorderThickness="0,0,0,1" BorderBrush="Black">
