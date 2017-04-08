@@ -20,8 +20,31 @@
 
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
             <TextBlock Text="HISTORIA" FontSize="26" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
-            <ListView>
-                
+            <ListView ItemsSource="{Binding Liiketoimet}" SelectionChanged="Liiketoimi_Selected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="2" BorderThickness="0,0,0,1" BorderBrush="Black">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <DockPanel Grid.Row="0" Grid.Column="0">
+                                    <TextBlock Width="50" Text="{Binding Id}"/>
+                                    <StackPanel Margin="5">
+                                        <TextBlock Text="{Binding AsiakasNimi}" FontSize="16" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding ShortDate}" FontSize="16"/>
+                                        <TextBlock Text="{Binding Yhteensa, StringFormat=€{0}}" FontSize="16"/>
+                                    </StackPanel>
+                                </DockPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </DockPanel>
 
@@ -40,28 +63,24 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Row="0" Grid.Column="1" Margin="5">
                     <TextBlock Text="Liiketoimi ID"/>
-                    <TextBox x:Name="tapahtumaIdBox" />
+                    <TextBox x:Name="liiketoimiIdBox" Text="{Binding SelectedLiiketoimi.Id}" IsReadOnly="True" />
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
                     <TextBlock Text="Ostopäivä"/>
-                    <TextBox x:Name="paivaBox"/>
+                    <TextBox x:Name="paivaBox" Text="{Binding SelectedLiiketoimi.ShortDate}" IsReadOnly="True" />
                 </StackPanel>
                 <StackPanel Grid.Row="2" Grid.Column="1" Margin="5">
                     <TextBlock Text="Maksutapa"/>
-                    <TextBox x:Name="maksutapaBox" />
+                    <TextBox x:Name="maksutapaBox" Text="{Binding SelectedLiiketoimi.Maksutapa}" IsReadOnly="True"  />
                 </StackPanel>
-                <StackPanel Grid.Row="3" Grid.Column="1" Margin="5">
-                    <TextBlock Text="Maksu ID"/>
-                    <TextBox />
-                </StackPanel>
-
+                
                 <StackPanel Grid.Row="0" Grid.Column="0" Margin="5">
                     <TextBlock Text="Nimi"/>
-                    <TextBox x:Name="nimiBox" />
+                    <TextBox x:Name="nimiBox" Text="{Binding SelectedLiiketoimi.AsiakasNimi}" IsReadOnly="True"  />
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
                     <TextBlock Text="Sähköposti"/>
-                    <TextBox />
+                    <TextBox Text="{Binding SelectedLiiketoimi.AsiakasSposti}" IsReadOnly="True" />
                 </StackPanel>
                 <StackPanel Grid.Row="2" Grid.Column="0" Margin="5">
                     <TextBlock Text="Puhelin"/>

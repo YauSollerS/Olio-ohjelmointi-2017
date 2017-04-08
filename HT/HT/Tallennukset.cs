@@ -27,8 +27,7 @@ namespace HT
     {
         Visa,
         MasterCard,
-        PayPal,
-        Kasirahat
+        PayPal
     }
 
     public static class Tallennukset

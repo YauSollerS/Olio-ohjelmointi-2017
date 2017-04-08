@@ -30,6 +30,9 @@ namespace HT
             DataContext = ViewModel;
         }
 
-       
+        private void Hyvaksy_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

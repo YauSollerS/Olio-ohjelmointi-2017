@@ -12,12 +12,12 @@ namespace HT.Models
         public DateTime Aika { get; set; }
         public string Seurantanumero { get; set; }
         public string MaksuId { get; set; }
-        public string AsiakasSposti { get; set; }
         public string AsiakasEnimi { get; set; }
         public string AsiakasSnimi { get; set; }
         public string Osoite { get; set; }
         public string ToimitusOsoite { get; set; }
         public string AsiakasPuhelin { get; set; }
+        public string AsiakasSposti { get; set; }
         public Toimitustavat Toimitus { get; set; }
         public Maksutavat Maksutapa { get; set; }
         public List<Tuote> Tuotteet { get; set; }
