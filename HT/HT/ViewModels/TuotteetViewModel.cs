@@ -28,7 +28,7 @@ namespace HT.ViewModels
         {
             get
             {
-                return _tuoteModel;
+                return _tuoteModel; 
             }
             set
             {
