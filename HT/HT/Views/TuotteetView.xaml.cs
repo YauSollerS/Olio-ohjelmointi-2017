@@ -29,29 +29,30 @@ namespace HT.Views
             DataContextChanged += new DependencyPropertyChangedEventHandler(View_DataContextChanged);
         }
 
+        //Aseta 'ViewModel'
         void View_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            
+            //Aseta viewmodel tieto kontekstiin
             ViewModel = DataContext as TuotteetViewModel;
-            
+            //Oletuksena, Valitse ensimmäinen tuote
             tuoteListview.SelectedIndex = 0;
         }
-
+        //Muokkaa tuotetta listalla
         private void Muokkaa_Click(object sender, RoutedEventArgs e)
         {
             PainaTuoteButtons();
         }
-
+        //Peruuta tuotteen päivitys
         private void Lopeta_Click(object sender, RoutedEventArgs e)
         {
             PainaTuoteButtons();
         }
-
+        //Päivitä tuotteen muokkaus
         private void Paivittaa_Click(object sender, RoutedEventArgs e)
         {
             PainaTuoteButtons();
         }
-
+        // Napauta panel displayta lisätäksesi/muokataksesi tuotetta
         private void PainaTuoteButtons()
         {
             if (lisaaPanel.Visibility == Visibility.Visible)

@@ -11,19 +11,20 @@ namespace HT.ViewModels
 {
     public class TuotteetViewModel : ObservableObject
     {
+        //Kokoelma kaikista tiedoston tuotteista
         private ObservableCollection<Tuote> _tuoteList { get; set; }
-
+        //Kokoelma näytöllä olevista tuotteista
         public ObservableCollection<Tuote> Tuotteet { get; set; }
-
+        //Kokoelma tuottajista tiedostolla
         public ObservableCollection<Tuottaja> Valmistajat { get; set; }
-
+        //Modeli tuotteistamme joita valmistamme, päivitämme tai poistamme
         private Tuote _tuoteModel { get; set; }
-
+        //Modeli tuotteistamme, joita katsomme par aikaa
         private Tuote _viewedTuote { get; set; }
-
+        
         private Tuottaja _selectedValmistaja { get; set; }
 
-
+        //Ominaisuus tuote modeliin pääsyyn
         public Tuote TuoteModel
         {
             get
@@ -36,7 +37,7 @@ namespace HT.ViewModels
                 OnPropertyChanged("TuoteModel");
             }
         }
-
+        //Ominaisuus pääsyyn valittuun tuottaja modeliin tuotemodelista
         public Tuottaja SelectedValmistaja
         {
             get
@@ -51,14 +52,14 @@ namespace HT.ViewModels
                 OnPropertyChanged("SelectedValmistaja");
             }
         }
-
+        //Ominaisuus katsottuun tuotteeseen pääsyyn
         public Tuote ViewedTuote
         {
             get { return _viewedTuote; }
             set
             {
                 _viewedTuote = value;
-
+                //Eittämättä hieman sekava looginen tapa asettaa tuottaja katsottuihin tuotteisiin
                 if (value != null && Valmistajat.Count > 0)
                 {
                     
@@ -118,13 +119,16 @@ namespace HT.ViewModels
 
         public TuotteetViewModel()
         {
+            //Lataa kaikki olemassa olevat tuotteet tiedostoon
             _tuoteList = Tallennukset.LoadTuoteList();
             Tuotteet = _tuoteList;
+            //Lataa kaikki tuottajien kontakteihin tiedostoon
             Valmistajat = Tallennukset.LoadTuottajat();
+            //Asettaa oletuksena tyhjän tuote modelin katsottavaksi
             TuoteModel = new Tuote();
             
             SelectedValmistaja = new Tuottaja();
-
+            //Asettaa kaikki käskyt päivitykseen, lisäykseen ja poistoon
             _editTuote = new RelayCommand(EditTuote);
             _addTuote = new RelayCommand(AddTuote);
             _removeTuote = new RelayCommand(RemoveTuote);
@@ -132,44 +136,47 @@ namespace HT.ViewModels
             _updateTuote = new RelayCommand(Update);
         }
 
+        //Luodaan tuote modeli Nykyiseen modeliin tiedot välittäen 
         public void EditTuote(object tuote)
         {
+            //Aseta modeli ja tuottaja tuotteisiin
             TuoteModel = tuote as Tuote;
             SelectedValmistaja.Id = TuoteModel.ValmistajaId;
-
+            //Aseta tuottaja kokoelman pohjalta. Jos tuottaja on poistettu, käytä ensimmäistä vaihtoehtoa listassa oletuksena
             SelectedValmistaja = Valmistajat.FirstOrDefault(c => c.Id == TuoteModel.ValmistajaId) ?? Valmistajat[0];
 
             OnPropertyChanged("TuoteModel");
 
         }
-
+        //Lisää uusi tuote kokoelmaan
         public void AddTuote()
         {
+            //Nimeä ID uuteen lisättyyn tuotteeseen 
             AntaaId(TuoteModel);
-            
+            //Aseta tuote tuotekokoelmaan
             _tuoteList.Add(TuoteModel);
 
             Update();
         }
-
+        //Poista tuote kokoelmasta
         public void RemoveTuote(object tuote)
         {
             var vanhaTuote = tuote as Tuote;
             _tuoteList.Remove(vanhaTuote);
             Update();
         }
-
+        //Tyhjentää tuote modelin ja tallentaa kokoelman tiedostoon
         public void Update()
         {
             TuoteModel = new Tuote();
             Tallennukset.SaveUusiTuoteList(_tuoteList);
         }
-
+        //Keskeyttää valitun tuotteen muokkauksen ja luo uuden
         public void Cancle()
         {
             TuoteModel = new Tuote();
         }
-
+        //Nimeä uusi ID tuotteelle
         private void AntaaId(Tuote tuote)
         {
             tuote.Id = 100;

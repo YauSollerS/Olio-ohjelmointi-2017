@@ -29,6 +29,7 @@ namespace HT
         public MainWindow()
         {
             InitializeComponent();
+            //Varmista että kaikki tarvittavat tiedot on olemassa tallessa
             Onkotiedostot();
 
             _clockTimer = new DispatcherTimer();

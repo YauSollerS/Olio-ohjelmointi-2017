@@ -37,6 +37,7 @@ namespace HT.Views
 
         private void Kassalle_Click(object sender, RoutedEventArgs e)
         {
+            //Avaa kassa ikkuna ja lähetä se ostoskorin tämänhetkiseen myynti tilaan
             KassaWindow kassaWindow = new KassaWindow(ViewModel);
             kassaWindow.ShowDialog();
         }

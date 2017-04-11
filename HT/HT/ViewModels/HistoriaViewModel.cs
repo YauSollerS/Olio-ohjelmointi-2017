@@ -14,13 +14,13 @@ namespace HT.ViewModels
 
         public HistoriaViewModel()
         {
-            
+            //Lataa kaikki kaupankäynnit tiedostosta
             Liiketoimet = Tallennukset.LoadLiiketoimi();
         }
 
         public void SelectLiiketoimi(Liiketoimi liiketoimi)
         {
-            
+            //Aseta valittu kaupankäynti
             SelectedLiiketoimi = liiketoimi;
             OnPropertyChanged("SelectedLiiketoimi");
         }
